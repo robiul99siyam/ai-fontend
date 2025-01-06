@@ -2,7 +2,7 @@ import React from "react";
 
 function TextInputPlaceholder() {
   return (
-    <div className="flex flex-col h-60 overflow-y-auto">
+    <div className="flex flex-col h-10 overflow-y-auto">
       <div className="flex flex-col space-y-4">
         <div className="flex justify-between animate-pulse">
           <div className="h-4 w-24 bg-gray-300 rounded"></div>

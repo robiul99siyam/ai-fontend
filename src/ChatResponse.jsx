@@ -6,25 +6,14 @@ export default function ChatResponse() {
 
   return (
     <>
-      <div className="flex flex-col h-60 overflow-y-auto">
+      <div className="flex flex-col h-[80%] w-full  overflow-y-auto scrollbar-hide">
         {data.map((item, index) => (
-          <div key={index} className="p-4">
+          <div key={item.id} className="p-4">
             <div className="flex justify-between">
-              <span className="text-sm text-gray-600">category:</span>
-              <span className="text-sm text-gray-400">{item.category}</span>
+              <h1 className="font-bold text-xl"> {item.title}</h1>
             </div>
             <div className="flex mt-2">
-              <img
-                src={item.image}
-                alt="User"
-                className="rounded-full w-10 h-10"
-              />
-              <div className="ml-4">
-                <p className="text-sm text-gray-700">
-                  {item.title ||
-                    "Hi there! How are you feeling today? I'm feeling great too!"}
-                </p>
-              </div>
+              <p>{item.description}</p>
             </div>
           </div>
         ))}
